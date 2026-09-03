@@ -1,31 +1,48 @@
-import { Mail } from "lucide-react";
 import { FaGithub } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
+import { Mail } from "lucide-react";
+import Container from "./container";
 
 export default function Footer() {
   return (
-    <footer className="border-t border-slate-800 mt-32">
-      <div className="max-w-7xl mx-auto px-6 py-12">
+    <footer className="mt-32 border-t border-slate-800">
 
-        <h2 className="gradient-text text-2xl font-bold">
-          Njoku Emeka
-        </h2>
+      <Container>
 
-        <p className="text-slate-400 mt-2">
-          Frontend Engineer building beautiful web experiences.
-        </p>
+        <div className="py-14 flex flex-col md:flex-row justify-between gap-8">
 
-        <div className="flex gap-4 my-6">
-          <FaGithub />
-          <FaLinkedin />
-          <Mail />
+          <div>
+            <h2 className="text-3xl font-bold gradient-text">
+              Njoku Emeka
+            </h2>
+
+            <p className="text-slate-400 mt-2 max-w-sm">
+              Frontend Engineer building production-ready web applications with Next.js and React.
+            </p>
+          </div>
+
+          <div className="flex gap-5 items-center">
+
+            <FaGithub/>
+
+            <FaLinkedin/>
+
+            <Mail/>
+
+          </div>
+
         </div>
 
-        <p className="text-sm text-slate-500">
-          © 2026 Njoku Emeka. Built with Next.js & Tailwind CSS.
-        </p>
+        <div className="border-t border-slate-800 py-6 text-sm text-slate-500 flex justify-between">
 
-      </div>
+          <span>© 2026 Njoku Emeka</span>
+
+          <span>Built with Next.js + Tailwind CSS</span>
+
+        </div>
+
+      </Container>
+
     </footer>
   );
 }

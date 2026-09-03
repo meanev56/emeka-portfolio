@@ -1,47 +1,30 @@
+// The stylesheet is handled by Next.js at build time.
+// @ts-expect-error Next.js resolves CSS side-effect imports without TypeScript declarations.
+
 import "./globals.css";
-import { Space_Grotesk, Inter } from "next/font/google";
-import { ThemeProvider } from "@/components/theme-provider";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
-
-
-
-const space = Space_Grotesk({
-  subsets: ["latin"],
-  variable: "--font-space",
-});
-
-const inter = Inter({
-  subsets: ["latin"],
-  variable: "--font-inter",
-});
+import { ThemeProvider } from "@/components/theme-provider";
 
 export const metadata = {
-  metadataBase: new URL("https://emekadev.vercel.app"),
-
   title: {
-    default: "Njoku Emeka — Frontend Engineer",
+    default: "Njoku Emeka | Frontend Engineer",
     template: "%s | Njoku Emeka",
   },
 
   description:
-    "Frontend Engineer specializing in Next.js, React, TypeScript, Tailwind CSS and production-ready web applications.",
+    "Frontend Engineer specializing in Next.js, React, TypeScript and Tailwind CSS.",
 
   keywords: [
-    "Frontend Engineer",
+    "Frontend Developer",
     "Next.js Developer",
     "React Developer",
     "Tailwind CSS",
     "TypeScript",
-    "Nigeria Frontend Developer",
+    "Nigeria",
   ],
 
-  openGraph: {
-    title: "Njoku Emeka Portfolio",
-    description:
-      "Frontend Engineer building modern web experiences.",
-    images: ["/og-image.png"],
-  },
+  authors: [{ name: "Njoku Emeka" }],
 };
 
 export default function RootLayout({
@@ -50,17 +33,17 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html suppressHydrationWarning lang="en">
-      <body className={`${space.variable} ${inter.variable}`}>
+    <html lang="en" suppressHydrationWarning>
+      <body
+        className="bg-background text-foreground"
+      >
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"
           enableSystem
         >
           <Navbar />
-
           <main>{children}</main>
-
           <Footer />
         </ThemeProvider>
       </body>

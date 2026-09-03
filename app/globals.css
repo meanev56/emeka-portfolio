@@ -24,11 +24,18 @@
   --border: #1e293b;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background: var(--background);
   color: var(--foreground);
+  font-family: var(--font-inter);
+}
+
+h1,h2,h3,h4,h5 {
   font-family: var(--font-space);
-  scroll-behavior: smooth;
 }
 
 ::selection {
@@ -42,4 +49,22 @@ body {
 
 .glass {
   @apply backdrop-blur-xl bg-white/5 border border-white/10;
+}
+
+.grid-pattern {
+  background-image:
+    linear-gradient(rgb(255 255 255 / 0.05) 1px, transparent 1px),
+    linear-gradient(to right, rgb(255 255 255 / 0.05) 1px, transparent 1px);
+
+  background-size: 50px 50px;
+}
+
+.glow {
+  box-shadow:
+    0 0 30px rgba(59,130,246,.25),
+    0 0 60px rgba(139,92,246,.18);
+}
+
+.section-padding {
+  @apply py-28 md:py-36;
 }
