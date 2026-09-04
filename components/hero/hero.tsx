@@ -30,7 +30,7 @@ export default function Hero() {
           </span>
 
           <h1 className="mt-8 text-5xl md:text-7xl font-bold leading-tight">
-            Hi, I'm{" "}
+            Hi, I&apos;m{" "}
             <span className="gradient-text">Njoku Emeka</span>
           </h1>
 
