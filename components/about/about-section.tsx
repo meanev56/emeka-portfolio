@@ -66,7 +66,7 @@ export default function AboutSection() {
 
             <div className="relative rounded-4xl glass overflow-hidden border border-white/10">
               <Image
-                src="/images/workspace.jpg"
+                src="/workspace.jpg"
                 alt="Njoku Emeka Workspace"
                 width={700}
                 height={900}
