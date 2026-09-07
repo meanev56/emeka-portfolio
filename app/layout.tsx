@@ -1,30 +1,48 @@
-// The stylesheet is handled by Next.js at build time.
-// @ts-expect-error Next.js resolves CSS side-effect imports without TypeScript declarations.
-
+import type { Metadata } from "next";
 import "./globals.css";
+
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
-import { ThemeProvider } from "@/components/theme-provider";
+import AnimationProvider from "@/components/providers/animation-provider";
 
-export const metadata = {
+export const metadata: Metadata = {
+  metadataBase: new URL("https://yourportfolio.vercel.app"),
+
   title: {
     default: "Njoku Emeka | Frontend Engineer",
     template: "%s | Njoku Emeka",
   },
 
   description:
-    "Frontend Engineer specializing in Next.js, React, TypeScript and Tailwind CSS.",
+    "Frontend Engineer building production-ready web applications with Next.js, React, TypeScript and Tailwind CSS.",
 
   keywords: [
-    "Frontend Developer",
+    "Frontend Engineer",
     "Next.js Developer",
     "React Developer",
-    "Tailwind CSS",
     "TypeScript",
+    "Tailwind CSS",
+    "Portfolio",
     "Nigeria",
   ],
 
-  authors: [{ name: "Njoku Emeka" }],
+  openGraph: {
+    title: "Njoku Emeka | Frontend Engineer",
+    description:
+      "Portfolio showcasing frontend engineering work across media, fintech, travel and telecom.",
+    images: ["/og-image.png"],
+    type: "website",
+  },
+
+  twitter: {
+    card: "summary_large_image",
+    images: ["/og-image.png"],
+  },
+
+  icons: {
+    icon: "/favicon.ico",
+    apple: "/apple-touch-icon.png",
+  },
 };
 
 export default function RootLayout({
@@ -34,18 +52,14 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body
-        className="bg-background text-foreground"
-      >
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="dark"
-          enableSystem
-        >
+      <body className="bg-[#020617] text-white antialiased">
+        <AnimationProvider>
           <Navbar />
-          <main>{children}</main>
+
+          {children}
+
           <Footer />
-        </ThemeProvider>
+        </AnimationProvider>
       </body>
     </html>
   );

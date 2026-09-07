@@ -29,42 +29,46 @@ html {
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: var(--font-inter);
-}
-
-h1,h2,h3,h4,h5 {
-  font-family: var(--font-space);
-}
-
-::selection {
-  background: #2563eb;
+  background: #020617;
   color: white;
 }
 
-.gradient-text {
-  @apply bg-gradient-to-r from-blue-500 via-purple-500 to-cyan-400 bg-clip-text text-transparent;
+::selection {
+  background: rgba(34, 211, 238, 0.3);
 }
 
 .glass {
-  @apply backdrop-blur-xl bg-white/5 border border-white/10;
-}
-
-.grid-pattern {
-  background-image:
-    linear-gradient(rgb(255 255 255 / 0.05) 1px, transparent 1px),
-    linear-gradient(to right, rgb(255 255 255 / 0.05) 1px, transparent 1px);
-
-  background-size: 50px 50px;
-}
-
-.glow {
-  box-shadow:
-    0 0 30px rgba(59,130,246,.25),
-    0 0 60px rgba(139,92,246,.18);
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(20px);
 }
 
 .section-padding {
-  @apply py-28 md:py-36;
+  padding-top: 7rem;
+  padding-bottom: 7rem;
+}
+
+.gradient-text {
+  background: linear-gradient(
+    90deg,
+    #22d3ee,
+    #60a5fa,
+    #a855f7,
+    #22d3ee
+  );
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(#22d3ee, #3b82f6, #9333ea);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-track {
+  background: #020617;
 }
