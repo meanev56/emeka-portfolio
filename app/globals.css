@@ -31,6 +31,7 @@ html {
 body {
   background: #020617;
   color: white;
+  transition: background 0.25s ease, color 0.25s ease;
 }
 
 ::selection {

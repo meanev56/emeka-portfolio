@@ -1,11 +1,22 @@
-interface Props {
+import { cn } from "@/lib/utils";
+
+interface ContainerProps {
   children: React.ReactNode;
+  className?: string;
 }
 
-export default function Container({ children }: Props) {
+export default function Container({
+  children,
+  className,
+}: ContainerProps) {
   return (
-    <section className="max-w-7xl mx-auto px-6 lg:px-10">
+    <div
+      className={cn(
+        "mx-auto w-full max-w-7xl px-5 sm:px-6 md:px-8 lg:px-10",
+        className
+      )}
+    >
       {children}
-    </section>
+    </div>
   );
 }

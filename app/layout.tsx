@@ -4,6 +4,7 @@ import "./globals.css";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 import AnimationProvider from "@/components/providers/animation-provider";
+import ThemeProvider from "@/components/providers/theme-provider";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://yourportfolio.vercel.app"),
@@ -53,13 +54,13 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body className="bg-[#020617] text-white antialiased">
-        <AnimationProvider>
-          <Navbar />
-
-          {children}
-
-          <Footer />
-        </AnimationProvider>
+        <ThemeProvider>
+           <AnimationProvider>
+              <Navbar />
+              {children}
+              <Footer />
+          </AnimationProvider>
+        </ThemeProvider>
       </body>
     </html>
   );
