@@ -54,6 +54,7 @@ pnpm dev
 ## 🚀 Deployment
 
 Deploy instantly with **Vercel**.
+https://emeka-portfolio-beta.vercel.app/
 
 ---
 

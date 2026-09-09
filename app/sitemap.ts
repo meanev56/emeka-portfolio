@@ -1,7 +1,7 @@
 import type { MetadataRoute } from "next";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const base = "https://yourportfolio.vercel.app";
+  const base = "https://emeka-portfolio-beta.vercel.app/";
 
   return [
     "",

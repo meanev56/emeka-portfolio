@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: "/",
     },
 
-    sitemap: "https://yourportfolio.vercel.app/sitemap.xml",
+    sitemap: "https://emeka-portfolio-beta.vercel.app/sitemap.xml",
   };
 }

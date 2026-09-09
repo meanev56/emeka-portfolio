@@ -4,7 +4,7 @@ export const SITE = {
   description:
     "Frontend Engineer building responsive, scalable web applications with Next.js, React, TypeScript and Tailwind CSS.",
 
-  url: "https://yourportfolio.vercel.app",
+  url: "https://emeka-portfolio-beta.vercel.app/",
 
   email: "emekanjoku86@gmail.com",
 

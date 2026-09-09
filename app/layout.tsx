@@ -7,7 +7,7 @@ import AnimationProvider from "@/components/providers/animation-provider";
 import ThemeProvider from "@/components/providers/theme-provider";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://yourportfolio.vercel.app"),
+  metadataBase: new URL("https://emeka-portfolio-beta.vercel.app/"),
 
   title: {
     default: "Njoku Emeka | Frontend Engineer",
