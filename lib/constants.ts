@@ -38,4 +38,4 @@ export const NAV_LINKS = [
     title: "Contact",
     href: "/contact",
   },
-];
+] as const;
