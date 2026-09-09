@@ -31,13 +31,13 @@ export default function Navbar() {
 
           <nav className="hidden items-center gap-8 lg:flex">
             {NAV_LINKS.map((link) => (
-              <Link
+              <a
                 key={link.href}
                 href={link.href}
                 className="text-sm text-slate-300 transition hover:text-cyan-400"
               >
                 {link.title}
-              </Link>
+              </a>
             ))}
           </nav>
 
@@ -72,14 +72,14 @@ export default function Navbar() {
             <Container className="py-6">
               <div className="flex flex-col gap-5">
                 {NAV_LINKS.map((link) => (
-                  <Link
+                  <a
                     key={link.href}
                     href={link.href}
                     onClick={() => setOpen(false)}
                     className="text-slate-300 hover:text-cyan-400"
                   >
                     {link.title}
-                  </Link>
+                  </a>
                 ))}
 
                 <ThemeToggle />

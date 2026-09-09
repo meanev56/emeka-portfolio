@@ -1,6 +1,5 @@
 "use client";
 
-import Link from "next/link";
 import { Mail, ArrowUpRight } from "lucide-react";
 import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
 
@@ -48,13 +47,13 @@ export default function Footer() {
 
             <div className="grid grid-cols-2 gap-4">
               {NAV_LINKS.map((link) => (
-                <Link
+                <a
                   key={link.href}
                   href={link.href}
                   className="text-slate-400 transition hover:text-cyan-400"
                 >
                   {link.title}
-                </Link>
+                </a>
               ))}
             </div>
           </div>
